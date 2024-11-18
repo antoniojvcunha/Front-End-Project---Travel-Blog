@@ -8,7 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        libre: ["Libre Baskerville", "sans-serif"],
+        anton: ["Anton", "sans-serif"],
+      },
+      colors: {
+        "areia": "#b8a894",
       }
     },
   },
