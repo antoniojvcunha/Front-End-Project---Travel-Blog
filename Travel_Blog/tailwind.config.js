@@ -12,6 +12,7 @@ export default {
       },
       colors: {
         "areia": "#b8a894",
+        "insta": "#C105B5",
       }
     },
   },

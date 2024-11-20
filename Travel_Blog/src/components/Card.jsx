@@ -8,8 +8,8 @@ function Card() {
           <p className="text-xl">Where to?</p>
         </div>
         <div className="flex justify-around px-3 py-3 mt-20">
-          <div className="bg-[url(./images/2.jpg)] max-w-sm rounded overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500">
-            <div className="px-6 py-4 text-white bg-black bg-opacity-60">
+          <div className="bg-[url(./images/2.jpg)] max-w-sm rounded-3xl overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500 group">
+            <div className="px-6 py-4 text-white bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 duration-1000">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
               <p className=" text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -31,10 +31,10 @@ function Card() {
           </div>
 
           <div
-            className="max-w-sm rounded overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500"
+            className="max-w-sm rounded-3xl overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500 group"
             style={{ backgroundImage: "url('./images/3.jpg')" }}
           >
-            <div className="px-6 py-4 bg-black bg-opacity-60 text-white">
+            <div className="px-6 py-4 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 duration-1000">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
               <p className=" text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -56,10 +56,10 @@ function Card() {
           </div>
 
           <div
-            className="max-w-sm rounded overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500"
+            className="max-w-sm rounded-3xl overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500 group"
             style={{ backgroundImage: "url('./images/1.jpg')" }}
           >
-            <div className="px-6 py-4 bg-black bg-opacity-60 text-white">
+            <div className="px-6 py-4 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 duration-1000">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
               <p className=" text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -80,10 +80,10 @@ function Card() {
             </div>
           </div>
           <div
-            className="max-w-sm rounded overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500"
+            className="max-w-sm rounded-3xl overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500 group"
             style={{ backgroundImage: "url('./images/3.jpg')" }}
           >
-            <div className="px-6 py-4 bg-black bg-opacity-60 text-white">
+            <div className="px-6 py-4 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 duration-1000">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
               <p className=" text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -104,10 +104,10 @@ function Card() {
             </div>
           </div>
           <div
-            className="max-w-sm rounded overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500"
+            className="max-w-sm rounded-3xl overflow-hidden shadow-lg bg-cover bg-center w-96 h-[38rem] flex flex-col justify-end hover:scale-105 duration-500 group"
             style={{ backgroundImage: "url('./images/3.jpg')" }}
           >
-            <div className="px-6 py-4 bg-black bg-opacity-60 text-white">
+            <div className="px-6 py-4 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 duration-1000">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
               <p className=" text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

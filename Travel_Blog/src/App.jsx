@@ -1,22 +1,17 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Card from "./components/Card";
-
-
+import Earth from "./components/Earth";
+import { Route, Switch } from "wouter";
+import HomeView from "./views/HomeView";
+import AboutMe from "./views/AboutMe";
 
 function App() {
-
   return (
     <>
-    <div>
-      <Navbar/>
-      <Hero/>
-      <Card/>
-      
-    </div>
-      
+      <Switch>
+        <Route path="/" component={HomeView}></Route>
+        <Route path="/aboutme" component={AboutMe}></Route>
+      </Switch>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
