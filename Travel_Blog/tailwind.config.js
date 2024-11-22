@@ -13,10 +13,12 @@ export default {
       colors: {
         "areia": "#b8a894",
         "insta": "#C105B5",
+        "ceu": "#FAEBD8",
       }
     },
   },
   plugins: [
     require('flowbite/plugin'),
+    require('daisyui'),
   ],
 }

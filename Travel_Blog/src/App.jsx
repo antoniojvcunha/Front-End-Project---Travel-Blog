@@ -6,10 +6,12 @@ import AboutMe from "./views/AboutMe";
 function App() {
   return (
     <>
-      <Switch>
-        <Route path="/" component={HomeView}></Route>
-        <Route path="/aboutme" component={AboutMe}></Route>
-      </Switch>
+      <div>
+        <Switch>
+          <Route path="/" component={HomeView}></Route>
+          <Route path="/aboutme" component={AboutMe}></Route>
+        </Switch>
+      </div>
     </>
   );
 }
