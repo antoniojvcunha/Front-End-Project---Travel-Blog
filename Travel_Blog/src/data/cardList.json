@@ -1,0 +1,23 @@
+[
+    {
+      "image": "./images/2.jpg",
+      "title": "Paris",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil",
+      "tags": ["#cold", "#travel", "#Eiffel"]
+    },
+    {
+      "image": "./images/1.jpg",
+      "title": "Coimbra",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil",
+      "tags": ["#cabra", "#travel", "#Choupal"]
+    },
+    {
+      "image": "./images/3.jpg",
+      "title": "Berlin",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil",
+      "tags": ["#Bayern", "#travel", "#Football"]
+    }
+  ]

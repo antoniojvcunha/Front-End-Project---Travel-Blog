@@ -19,12 +19,12 @@ function Navbar() {
             >
               forecast
             </a>
-            <a
-              href="#"
+            <Link
+              href="/locations"
               className="border-b-2 border-transparent hover:text-gray-800  hover:border-gray-600 mx-1.5 sm:mx-6"
             >
-              map
-            </a>
+              locations
+            </Link>
             <Link
               href="/aboutme"
               className="border-b-2 border-transparent hover:text-gray-800  hover:border-gray-600 mx-1.5 sm:mx-6"

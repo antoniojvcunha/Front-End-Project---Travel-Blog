@@ -19,13 +19,17 @@ function AboutMe() {
                   quidem fugiat voluptatem perferendis!
                 </p>
               </div>
-              <img className="w-96" src="./public/images/me.jpg" alt="me" />
+              <div className="bg-white w-[24rem] p-4">
+                <img className="w-96" src="./public/images/me.jpg" alt="me" />
+              </div>
             </div>
           </div>
 
           <div className="flex justify-center mt-36">
             <div className="w-[90rem] flex justify-between items-center">
-              <img className="w-96" src="./public/images/me.jpg" alt="me" />
+              <div className="bg-white w-[24rem] p-4">
+                <img className="w-96" src="./public/images/me.jpg" alt="me" />
+              </div>
               <div className="flex flex-col gap-6">
                 <h1 className="text-2xl">This is my story</h1>
                 {/* Progress Bars */}
@@ -56,8 +60,8 @@ function AboutMe() {
             </div>
           </div>
 
-          <div className="flex justify-center mt-36 mb-36 w-[80rem]">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex justify-center items-center min-h-screen">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-[80rem] p-4 bg-white rounded-lg">
               <div class="grid gap-4">
                 <div>
                   <img
