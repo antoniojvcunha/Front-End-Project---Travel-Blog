@@ -4,6 +4,8 @@ import HomeView from "./views/HomeView";
 import AboutMe from "./views/AboutMe";
 import Locations from "./views/Locations";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
 function App() {
   return (
     <>
@@ -13,6 +15,12 @@ function App() {
           <Route path="/aboutme" component={AboutMe}></Route>
           <Route path="/locations" component={Locations}></Route>
         </Switch>
+      </div>
+
+      <div>
+        <Swiper>
+          <SwiperSlide></SwiperSlide>
+        </Swiper>
       </div>
     </>
   );

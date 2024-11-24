@@ -1,3 +1,5 @@
+import Swiper from "../components/Swiper";
+
 function Hero() {
   return (
     <>
@@ -11,6 +13,7 @@ function Hero() {
             incidunt.
           </p>
         </div>
+        <Swiper />
       </div>
     </>
   );

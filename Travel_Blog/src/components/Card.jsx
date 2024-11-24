@@ -18,7 +18,7 @@ function Card() {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-transparent to-black mt-[50rem] hover:bg-areia hover:bg-opacity-15 duration-300">
+      <div className="bg-gradient-to-b from-transparent to-black mt-[42rem] hover:bg-areia hover:bg-opacity-15 duration-300">
         <div className="text-center">
           <p className="text-3xl">Popular Places</p>
           <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
