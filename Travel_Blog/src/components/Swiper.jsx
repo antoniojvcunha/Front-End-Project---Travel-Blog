@@ -4,6 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "../styles/swiperCustom.css";
 
 function Slide() {
   const [card, setCard] = useState([]);
@@ -29,24 +30,22 @@ function Slide() {
     <>
       <Swiper
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={10}
         centeredSlides={true}
         loop={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper w-[45rem] "
+        className="mySwiper w-[45rem] h-[27rem] "
       >
         {card.length > 0 ? (
           card.map((item) => (
-            <SwiperSlide key={item.id}>
-              {/* Renderiza o conteúdo de cada card */}
-              <div className="relative p-2">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-96 h-[20rem] object-cover rounded-3xl hover:scale-105 duration-500 group"
-                />
-                <div className="absolute bottom-0 w-full text-white  p-4">
+            <SwiperSlide>
+              <div
+                key={item.id}
+                style={{ backgroundImage: `url(${item.image})` }}
+                className="w-45 h-[20rem] object-cover bg-cover bg-center rounded-2xl hover:scale-105 duration-500 group relativ cursor-pointer"
+              >
+                <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 opacity-0 group-hover:opacity-100 duration-1000">
                   <p className="text-sm">{item.description}</p>
                   <h3 className="text-lg font-bold">{item.title}</h3>
                 </div>

@@ -1,0 +1,45 @@
+.mySwiper {
+  position: relative;
+  height: fit-content;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  border: 2px solid white; /* Borda branca */
+  border-radius: 50%; /* Forma circular */
+  background-color: transparent; /* Fundo transparente */
+  display: flex;
+  position: absolute;
+  margin-top: 10rem; /* Posiciona abaixo do slider */
+  z-index: 10; /* Garante que os botões estejam no topo */
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+/* Ícones dentro dos botões */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px; /* Tamanho do ícone */
+  color: white; /* Cor do ícone */
+  font-weight: bold; /* Negrito */
+}
+
+/* Posição específica dos botões */
+.swiper-button-prev {
+  left: 2%; /* Posiciona à esquerda (centralizado horizontalmente) */
+}
+.swiper-button-next {
+  right: 83%; /* Posiciona à direita (centralizado horizontalmente) */
+}
+
+/* Adiciona efeito ao passar o mouse */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fundo levemente transparente ao hover */
+  transform: scale(1.1); /* Aumenta ligeiramente */
+}

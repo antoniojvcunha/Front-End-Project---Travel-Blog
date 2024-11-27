@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 function App() {
   return (
     <>
-      <div>
+      <div className="container mx-auto">
         <Switch>
           <Route path="/" component={HomeView}></Route>
           <Route path="/aboutme" component={AboutMe}></Route>
