@@ -3,9 +3,11 @@ import Swiper from "../components/Swiper";
 function Hero() {
   return (
     <>
-      <div className="flex gap-36">
-        <div className="mt-40 flex-col items-center text-left max-w-[54rem]">
-          <p className="uppercase text-9xl">Adventures exists in the unknown</p>
+      <div className="flex gap-32">
+        <div className="mt-18 flex-col items-center text-left max-w-[52rem]">
+          <p className="uppercase text-[7rem] leading-none">
+            Adventures exists in the unknown
+          </p>
           <p className="mt-7">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus,
             earum adipisci sunt fugiat, laborum nemo ipsa asperiores, qui cumque
@@ -13,8 +15,10 @@ function Hero() {
             incidunt.
           </p>
         </div>
-        <div className="mt-60">
-          <Swiper />
+        <div className="overflow-hidden">
+          <div className="mt-32 ml-[13rem]">
+            <Swiper />
+          </div>
         </div>
       </div>
 

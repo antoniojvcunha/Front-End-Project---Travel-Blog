@@ -15,10 +15,7 @@ function Maps() {
 
   return (
     <>
-      <APIProvider
-        apiKey="AIzaSyBWAOvCRygXQyNndO8qFwqfCyJ1KurC2EY"
-        libraries={["places"]}
-      >
+      <APIProvider apiKey="AIzaSyBWAOvCRygXQyNndO8qFwqfCyJ1KurC2EY">
         <div className="h-[30rem] w-[50rem]">
           <Map zoom={3} center={position} mapId="778555028a2db7cf">
             <AdvancedMarker position={position} onClick={() => setOpen(true)}>
@@ -34,7 +31,7 @@ function Maps() {
                 position={position}
                 onCloseClick={() => setOpen(false)}
               >
-                <p>Estou em Hamburgo</p>
+                <p>Estou em África</p>
               </InfoWindow>
             )}
           </Map>

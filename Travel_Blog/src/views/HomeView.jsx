@@ -7,8 +7,10 @@ function HomeView() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Card />
+      <div className="my-24 ml-24">
+        <Hero />
+        <Card />
+      </div>
       <Footer />
     </>
   );
