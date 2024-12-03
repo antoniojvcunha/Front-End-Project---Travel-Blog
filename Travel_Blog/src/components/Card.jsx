@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 
 function Card() {
   const [card, setCard] = useState([]);
@@ -22,15 +23,19 @@ function Card() {
         <div className="flex justify-around flex-wrap px-3 py-3 mt-20 gap-8">
           {card.length > 0 ? (
             card.map((cardItem, index) => (
-              <div
-                key={index}
-                style={{ backgroundImage: `url(${cardItem.image})` }}
-                className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-cover bg-center w-[38rem] h-[18rem] flex flex-col justify-end text-center hover:scale-105 duration-500 group"
-              >
-                <div className="px-6 py-4 text-white bg-black bg-opacity-60 opacity-80 group-hover:opacity-100 duration-1000">
-                  <div className="font-bold text-xl mb-2">{cardItem.title}</div>
+              <Link href={`/each-location/${cardItem.id}`}>
+                <div
+                  key={index}
+                  style={{ backgroundImage: `url(${cardItem.image})` }}
+                  className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-cover bg-center w-[38rem] h-[18rem] flex flex-col justify-end text-center hover:scale-105 duration-500 group"
+                >
+                  <div className="px-6 py-4 text-white bg-black bg-opacity-60 opacity-80 group-hover:opacity-100 duration-1000">
+                    <div className="font-bold text-xl mb-2">
+                      {cardItem.name}
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))
           ) : (
             <p className="text-white">Loading...</p>

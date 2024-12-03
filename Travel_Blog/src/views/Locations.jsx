@@ -15,7 +15,7 @@ function Locations() {
         </div>
         <div>
           <h1 className="flex justify-center mt-10 text-3xl mb-10">Africa</h1>
-          <div className=" bg-gradient-to-b from-transparent to-areia">
+          <div className="bg-gradient-to-b from-transparent to-areia">
             <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
               <Card />
             </div>

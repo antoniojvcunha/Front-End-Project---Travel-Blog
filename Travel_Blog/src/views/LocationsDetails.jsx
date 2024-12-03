@@ -11,8 +11,10 @@ import Maps from "../components/Maps";
 import Navbar from "../components/Navbar";
 import SlideBackground from "../components/SlideBackground";
 import { useEffect, useState } from "react";
+import Gallery from "../components/Gallery";
+import { Link } from "wouter";
 
-function LocationsDetails() {
+function LocationsDetails({ params }) {
   const [location, setLocation] = useState([]);
 
   useEffect(() => {
@@ -22,6 +24,10 @@ function LocationsDetails() {
           "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/locationsData"
         );
         const result = await response.json();
+
+        const filterData = result.filter((value) => {
+          return value.id == params.id;
+        });
         setLocation(result);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -102,109 +108,14 @@ function LocationsDetails() {
               <div>
                 <Maps />
                 <div className="flex gap-16 mt-10 justify-center">
-                  <p>wheather</p>
+                  <p>Weather</p>
                   <p>Current time</p>
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex justify-center mx-auto my-24">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-white rounded-lg w-[90rem]">
-                  <div class="grid gap-2">
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="grid gap-2">
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="grid gap-2">
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="grid gap-2">
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      <img
-                        class="h-auto max-w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <Gallery />
+
             <Footer />
           </div>
         ))
