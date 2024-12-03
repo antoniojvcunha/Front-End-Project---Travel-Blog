@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -12,12 +11,30 @@ import "../styles/slideBackground.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-function SlideBackground() {
-  const images = [
-    "https://www.cuddlynest.com/blog/wp-content/uploads/2023/01/facts-about-new-york-central-park-scaled.jpg",
-    "https://wallup.net/wp-content/uploads/2019/10/972979-new-york-city-cities-brooklyn-bridge-manhattan-ville-usa-building-2.jpg",
-    "https://ofcourseme.com/wp-content/uploads/2020/03/GettyImages-946087016.jpg",
-  ];
+function SlideBackground({ params }) {
+  const [location, setLocation] = useState(null);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const response = await fetch(
+          "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/cardList"
+        );
+        const result = await response.json();
+
+        const filteredResult = result.filter(
+          (value) => value.slug == params.locationSlug
+        );
+        if (filteredResult.length === 1) {
+          setLocation(filteredResult[0]);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    loadData();
+  }, [params.locationSlug]);
 
   return (
     <>
@@ -35,20 +52,24 @@ function SlideBackground() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div
-              className="w-full h-[38rem] bg-center bg-cover"
-              style={{
-                backgroundImage: `url(${image})`,
-              }}
-            >
-              <div className="flex flex-col justify-center items-center text-white h-full bg-black bg-opacity-50">
-                <h1 className="text-3xl uppercase">New York</h1>
+        {location && location.images ? (
+          location.images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="w-full h-[38rem] bg-center bg-cover"
+                style={{
+                  backgroundImage: `url(${image})`,
+                }}
+              >
+                <div className="flex flex-col justify-center items-center text-white h-full bg-black bg-opacity-50">
+                  <h1 className="text-3xl uppercase">{location.name}</h1>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </Swiper>
     </>
   );

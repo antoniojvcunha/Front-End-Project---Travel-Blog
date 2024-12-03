@@ -42,12 +42,12 @@ function Slide() {
             <SwiperSlide>
               <div
                 key={item.id}
-                style={{ backgroundImage: `url(${item.image})` }}
+                style={{ backgroundImage: `url(${item.thumbnail})` }}
                 className="w-45 h-[20rem] object-cover bg-cover bg-center rounded-2xl hover:scale-105 duration-500 group relativ cursor-pointer"
               >
                 <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 opacity-0 group-hover:opacity-100 duration-1000">
                   <p className="text-sm">{item.description}</p>
-                  <h3 className="text-lg font-bold">{item.title}</h3>
+                  <h3 className="text-lg font-bold">{item.name}</h3>
                 </div>
               </div>
             </SwiperSlide>

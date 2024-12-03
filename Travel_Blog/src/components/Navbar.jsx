@@ -14,7 +14,7 @@ function Navbar() {
               home
             </Link>
             <Link
-              href="/each-location"
+              href="#"
               className="border-b-2 border-transparent hover:text-gray-800 hover:border-gray-600 mx-1.5 sm:mx-6"
             >
               forecast

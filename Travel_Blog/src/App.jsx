@@ -14,7 +14,10 @@ function App() {
           <Route path="/" component={HomeView}></Route>
           <Route path="/aboutme" component={AboutMe}></Route>
           <Route path="/locations" component={Locations}></Route>
-          <Route path="/each-location" component={LocationsDetails}></Route>
+          <Route
+            path="/locations/:locationSlug"
+            component={LocationsDetails}
+          ></Route>
         </Switch>
       </div>
     </>
