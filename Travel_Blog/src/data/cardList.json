@@ -1,23 +1,90 @@
 [
-    {
-      "image": "./images/2.jpg",
-      "title": "Paris",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil",
-      "tags": ["#cold", "#travel", "#Eiffel"]
-    },
-    {
-      "image": "./images/1.jpg",
-      "title": "Coimbra",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil",
-      "tags": ["#cabra", "#travel", "#Choupal"]
-    },
-    {
-      "image": "./images/3.jpg",
-      "title": "Berlin",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil",
-      "tags": ["#Bayern", "#travel", "#Football"]
+  {
+    "id": "1",
+    "slug": "new-york",
+    "name": "New York",
+    "thumbnail": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/aa/b1/79/caption.jpg?w=1200&h=-1&s=1",
+    "images": [
+      "https://www.cuddlynest.com/blog/wp-content/uploads/2023/01/facts-about-new-york-central-park-scaled.jpg",
+      "https://wallup.net/wp-content/uploads/2019/10/972979-new-york-city-cities-brooklyn-bridge-manhattan-ville-usa-building-2.jpg",
+      "https://ofcourseme.com/wp-content/uploads/2020/03/GettyImages-946087016.jpg"
+    ],
+    "description": "New York City is a dazzling metropolis renowned for its iconic skyline, cultural diversity, and endless energy. As a global hub for art, finance, and entertainment, it offers landmarks like the Statue of Liberty, Times Square, and Central Park. Visitors can explore world-class museums such as the Metropolitan Museum of Art, catch a Broadway show, or savor international cuisine in its vibrant neighborhoods like Chinatown and Little Italy. Beyond the city, the state of New York features natural wonders like Niagara Falls and the Adirondack Mountains, blending urban sophistication with breathtaking natural beauty.",
+    "language": "English",
+    "religion": "Christianity",
+    "attractions": "Liberty State, Empire State Building",
+    "currency": "Dollar",
+    "climate": "humid subtropical",
+    "population": "100.000",
+    "coordinates": {
+      "lat": "40.7128",
+      "lng": "-74.0060"
     }
-  ]
+  },
+  {
+    "id": "2",
+    "slug": "andorra",
+    "name": "Andorra",
+    "thumbnail": "https://magupelomundo.com/wp-content/uploads/2023/01/vista-aerea-de-andorra-la-vella-em-andorra-cidade-fica-na-cordilheira-dos-pirineus-entre-franca-e-espanha-1670504760192_v2_1170x540-1024x473.jpg",
+    "images": [
+      "https://freedomhouse.org/sites/default/files/2020-02/Andorra__Country_portal_shutterstock_1446148013-127_SELECTION.jpg",
+      "https://cdn.mappr.co/wp-content/uploads/2023/05/capital-of-andorra-andorra-la-vella.jpg",
+      "https://assets.e-konomista.pt/uploads/2019/10/andorra.jpg"
+    ],
+    "description": "Nestled in the Pyrenees between Spain and France, Andorra is a picturesque microstate known for its stunning alpine landscapes, charming villages, and world-class skiing. This small yet vibrant country is a haven for outdoor enthusiasts, offering activities such as hiking, cycling, and snow sports against a backdrop of dramatic peaks and lush valleys. Beyond its natural beauty, Andorra boasts a rich cultural heritage, with Romanesque churches and a blend of Spanish and French influences. Renowned for its duty-free shopping and spa retreats, Andorra combines adventure and relaxation in an unforgettable mountain setting.",
+    "language": "Catalan",
+    "religion": "Christianity",
+    "attractions": "Mirador del Roc del Quer, Grandvalira",
+    "currency": "Euro",
+    "climate": "humid subtropical",
+    "population": "85.000",
+    "coordinates": {
+      "lat": "42.5077",
+      "lng": "1.5211"
+    }
+  },
+  {
+    "id": "3",
+    "slug": "dolomites-lavaredo",
+    "name": "Dolomites - Lavaredo",
+    "thumbnail": "https://cdn.bookatrekking.com/data/images/2023/11/shutterstock-1906880248.webp",
+    "images": [
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.italia.it%2Fcontent%2Fdam%2Ftdh%2Fit%2Fdestinations%2Ftrentino%2Fmedia%2F20210412214907-tre-cime-di-lavaredo-alto-adige-gettyimages-584589490cut.jpg&f=1&nofb=1&ipt=02692b18ef39a8eb403fdf30639210253160cfda9a178f9b954a04bad13ef48d&ipo=images",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwindows10spotlight.com%2Fwp-content%2Fuploads%2F2022%2F05%2Ffc6f2f23939b6dc284a655898d021616.jpg&f=1&nofb=1&ipt=05a70fcc50b6503b1e1817b6b70cf959c8dc70dc41c2ca8b158f863b11219500&ipo=images",
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fce%2Fa1%2F6b%2Fcea16bebf22d34fded8ef5d6612dca19.jpg&f=1&nofb=1&ipt=2973b687659f0415d49631390739b3dd5e70723447e44d2887fb3d0939dbb38e&ipo=images"
+    ],
+    "description": "Three Peaks of Lavaredo, is one of the most iconic landmarks in the Dolomites, a UNESCO World Heritage Site in northeastern Italy. These three majestic limestone peaks—Cima Grande, Cima Ovest, and Cima Piccola—tower over the alpine landscape, attracting hikers, climbers, and photographers from around the world. The area offers breathtaking trails, including the famous Tre Cime Loop, which provides panoramic views of jagged peaks, alpine meadows, and serene mountain lakes. A haven for nature lovers, Lavaredo is a symbol of the Dolomites’ rugged beauty and geological significance.",
+    "language": "Italian",
+    "religion": "Christianity",
+    "attractions": "Three Peaks of Lavaredo",
+    "currency": "Euro",
+    "climate": "mild continental climate",
+    "population": "4,800,000",
+    "coordinates": {
+      "lat": "46.6170",
+      "lng": "12.3058"
+    }
+  },
+  {
+    "id": "4",
+    "slug": "thailand",
+    "name": "Thailand",
+    "thumbnail": "https://www.cronista.com/files/image/297/297593/5ffe0c82c6d33.jpg",
+    "images": [
+      "https://www.tripsavvy.com/thmb/8ZvQjzLoXGk6jt1Fr3oKNYjKvkg=/6016x4016/filters:no_upscale():max_bytes(150000):strip_icc()/bangkok-grand-palace-5aadb03e8e1b6e0037023644.jpg",
+      "https://lp-cms-production.imgix.net/2021-03/GettyRF_178111904.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=20&dpr=5",
+      "https://hdwallpaperim.com/wp-content/uploads/2017/09/17/65176-city-cityscape-long_exposure-Thailand-Bangkok-Buddhism-light_trails.jpg"
+    ],
+    "description": "Thailand is a captivating Southeast Asian country known for its vibrant culture, stunning landscapes, and warm hospitality. From the bustling streets of Bangkok, with its golden temples like Wat Arun and the Grand Palace, to the tranquil beaches of Phuket and Krabi, Thailand offers something for every traveler. The northern city of Chiang Mai is a cultural haven, surrounded by lush mountains and ancient temples. Thailand is also famed for its mouthwatering cuisine, including dishes like Pad Thai and Tom Yum. With its rich traditions, vibrant festivals, and serene tropical beauty, Thailand promises an unforgettable experience.",
+    "language": "Thai",
+    "religion": "Buddhism",
+    "attractions": "Grand Palace, Phi Phi Islands, Chiang Mai Temples",
+    "currency": "Thai Baht",
+    "climate": "Tropical monsoon climate",
+    "population": "70,000,000",
+    "coordinates": {
+      "lat": "15.8700",
+      "lng": "100.9925"
+    }
+  }
+]

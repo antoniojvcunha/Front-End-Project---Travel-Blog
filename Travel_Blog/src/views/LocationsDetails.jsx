@@ -23,9 +23,6 @@ function LocationsDetails({ params }) {
           "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/cardList"
         );
         const result = await response.json();
-        console.log("-----------");
-        console.log(params.locationSlug);
-
         const filteredResult = result.find(
           (value) => value.slug === params.locationSlug
         );
@@ -48,70 +45,74 @@ function LocationsDetails({ params }) {
             <Navbar />
           </div>
           <SlideBackground params={{ locationSlug: params.locationSlug }} />
-          <div className="flex gap-10 my-24 ml-24 mr-24">
-            <div className="mt-20 text-justify flex flex-col gap-6 max-w-[55rem]">
-              <h1>Overview</h1>
-              <p>{location.description}</p>
+          <div className="flex flex-col lg:flex-row gap-10 my-12 mx-6 lg:mx-24">
+            <div className="mt-10 text-justify flex flex-col gap-6 max-w-full lg:max-w-[55rem]">
+              <h1 className="text-2xl lg:text-3xl font-bold">Overview</h1>
+              <p className="text-sm lg:text-base">{location.description}</p>
 
-              <div className="flex flex-col gap-4">
-                <h1>Some Facts</h1>
-                <div className="grid grid-cols-2 gap-4">
+              <div className="flex flex-col gap-4 items-center md:items-start">
+                <h1 className="text-2xl lg:text-3xl font-bold text-center md:text-left">
+                  Some Facts
+                </h1>
+                <div className="grid grid-cols-1 content-center sm:grid-cols-2 gap-4 justify-items-center md:justify-items-start">
                   <div className="flex gap-3 items-center">
-                    <LanguageIcon className="size-8 text-blue-500" />
-                    <div className="flex flex-col">
-                      <p>Language:</p>
-                      <p>{location.language}</p>
+                    <LanguageIcon className="h-6 w-6 text-blue-500" />
+                    <div className="flex flex-col text-center">
+                      <p className="text-sm font-semibold">Language:</p>
+                      <p className="text-xs">{location.language}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <CurrencyDollarIcon className="size-8 text-blue-500" />
-                    <div className="flex flex-col">
-                      <p>Currency:</p>
-                      <p>{location.currency}</p>
+                    <CurrencyDollarIcon className="h-6 w-6 text-blue-500" />
+                    <div className="flex flex-col text-center">
+                      <p className="text-sm font-semibold">Currency:</p>
+                      <p className="text-xs">{location.currency}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <BookOpenIcon className="size-8 text-blue-500" />
-                    <div className="flex flex-col">
-                      <p>Religion:</p>
-                      <p>{location.religion}</p>
+                    <BookOpenIcon className="h-6 w-6 text-blue-500" />
+                    <div className="flex flex-col text-center">
+                      <p className="text-sm font-semibold">Religion:</p>
+                      <p className="text-xs">{location.religion}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <SunIcon className="size-8 text-blue-500" />
-                    <div className="flex flex-col">
-                      <p>Climate:</p>
-                      <p>{location.climate}</p>
+                    <SunIcon className="h-6 w-6 text-blue-500" />
+                    <div className="flex flex-col text-center">
+                      <p className="text-sm font-semibold">Climate:</p>
+                      <p className="text-xs">{location.climate}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <BuildingLibraryIcon className="size-8 text-blue-500" />
-                    <div className="flex flex-col">
-                      <p>Attractions:</p>
-                      <p>{location.attractions}</p>
+                    <BuildingLibraryIcon className="h-6 w-6 text-blue-500" />
+                    <div className="flex flex-col text-center">
+                      <p className="text-sm font-semibold">Attractions:</p>
+                      <p className="text-xs">{location.attractions}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <UsersIcon className="size-8 text-blue-500" />
-                    <div className="flex flex-col">
-                      <p>Population:</p>
-                      <p>{location.population}</p>
+                    <UsersIcon className="h-6 w-6 text-blue-500" />
+                    <div className="flex flex-col text-center">
+                      <p className="text-sm font-semibold">Population:</p>
+                      <p className="text-xs">{location.population}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <Maps citySlug={params.locationSlug} />
-              <div className="flex gap-16 mt-10 justify-center">
-                <p>Weather</p>
-                <p>Current time</p>
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="w-full lg:w-[30rem] h-[20rem] lg:h-[25rem]">
+                <Maps citySlug={params.locationSlug} />
+              </div>
+              <div className="flex flex-col gap-4 mt-6 text-center lg:text-left">
+                <p className="font-semibold text-lg">Weather</p>
+                <p className="font-semibold text-lg">Current Time</p>
               </div>
             </div>
           </div>
@@ -121,7 +122,9 @@ function LocationsDetails({ params }) {
           <Footer />
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="flex items-center justify-center h-screen">
+          <p className="text-xl font-semibold">Loading...</p>
+        </div>
       )}
     </>
   );
