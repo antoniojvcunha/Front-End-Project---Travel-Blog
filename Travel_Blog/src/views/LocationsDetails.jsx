@@ -90,7 +90,7 @@ function LocationsDetails({ params }) {
                     <BuildingLibraryIcon className="size-8 text-blue-500" />
                     <div className="flex flex-col">
                       <p>Attractions:</p>
-                      <p>{location.monuments}</p>
+                      <p>{location.attractions}</p>
                     </div>
                   </div>
 
