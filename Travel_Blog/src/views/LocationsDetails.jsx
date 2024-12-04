@@ -23,6 +23,8 @@ function LocationsDetails({ params }) {
           "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/cardList"
         );
         const result = await response.json();
+        console.log("-----------");
+        console.log(params.locationSlug);
 
         const filteredResult = result.find(
           (value) => value.slug === params.locationSlug
@@ -105,10 +107,12 @@ function LocationsDetails({ params }) {
               </div>
             </div>
 
-            <Maps params={{ coordinatesSlug: location.coordinatesSlug }} />
-            <div className="flex gap-16 mt-10 justify-center">
-              <p>Weather</p>
-              <p>Current time</p>
+            <div>
+              <Maps citySlug={params.locationSlug} />
+              <div className="flex gap-16 mt-10 justify-center">
+                <p>Weather</p>
+                <p>Current time</p>
+              </div>
             </div>
           </div>
 

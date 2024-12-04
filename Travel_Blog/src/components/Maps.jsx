@@ -9,7 +9,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 
-function Maps({ params }) {
+function Maps({ citySlug }) {
   const [open, setOpen] = useState(false);
 
   const [coordinates, setCoordinates] = useState(null);
@@ -21,10 +21,13 @@ function Maps({ params }) {
           "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/cardList"
         );
         const result = await response.json();
-
-        const filteredResult = result.find(
-          (value) => value.slug === params.coordinatesSlug
-        );
+        console.log(result);
+        const filteredResult = result.find((value) => {
+          console.log(value.slug);
+          console.log(citySlug);
+          return value.slug === citySlug;
+        });
+        console.log(filteredResult);
         if (filteredResult && filteredResult.coordinates) {
           setCoordinates({
             lat: parseFloat(filteredResult.coordinates.lat),
@@ -37,7 +40,7 @@ function Maps({ params }) {
     }
 
     loadData();
-  }, [params]);
+  }, [citySlug]);
 
   return (
     <>
@@ -45,7 +48,7 @@ function Maps({ params }) {
         {coordinates ? (
           <div className="h-[30rem] w-[50rem]">
             <Map
-              defaultZoom={3}
+              defaultZoom={5}
               defaultCenter={{ lat: coordinates.lat, lng: coordinates.lng }}
               mapId="778555028a2db7cf"
             >
