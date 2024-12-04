@@ -24,11 +24,11 @@ function LocationsDetails({ params }) {
         );
         const result = await response.json();
 
-        const filteredResult = result.filter(
-          (value) => value.slug == params.locationSlug
+        const filteredResult = result.find(
+          (value) => value.slug === params.locationSlug
         );
-        if (filteredResult.length === 1) {
-          setLocation(filteredResult[0]);
+        if (filteredResult && filteredResult.coordinates) {
+          setLocation(filteredResult);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -105,12 +105,10 @@ function LocationsDetails({ params }) {
               </div>
             </div>
 
-            <div>
-              <Maps />
-              <div className="flex gap-16 mt-10 justify-center">
-                <p>Weather</p>
-                <p>Current time</p>
-              </div>
+            <Maps params={{ coordinatesSlug: location.coordinatesSlug }} />
+            <div className="flex gap-16 mt-10 justify-center">
+              <p>Weather</p>
+              <p>Current time</p>
             </div>
           </div>
 
