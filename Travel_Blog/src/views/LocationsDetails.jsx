@@ -119,10 +119,12 @@ function LocationsDetails({ params }) {
               <div className="w-full lg:w-[30rem] h-[20rem] lg:h-[25rem]">
                 <Maps citySlug={params.locationSlug} />
               </div>
-              {coordinates && (
-                <div>
-                  <Weather lat={coordinates.lat} lng={coordinates.lng} />
-                </div>
+              {location && location.coordinates && (
+                <Weather
+                  lat={location.coordinates.lat}
+                  lng={location.coordinates.lng}
+                  locationName={location.name} // Passando o nome da localização para o Weather
+                />
               )}
             </div>
           </div>

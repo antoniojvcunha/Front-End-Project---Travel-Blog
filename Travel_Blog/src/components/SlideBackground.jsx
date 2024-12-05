@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "../styles/slideBackground.css";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Weather from "./Weather"; // Importe o componente Weather
 
 function SlideBackground({ params }) {
   const [location, setLocation] = useState(null);
