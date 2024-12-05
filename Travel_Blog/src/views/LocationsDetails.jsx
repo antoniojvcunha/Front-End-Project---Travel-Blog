@@ -12,9 +12,11 @@ import Navbar from "../components/Navbar";
 import SlideBackground from "../components/SlideBackground";
 import { useEffect, useState } from "react";
 import Gallery from "../components/Gallery";
+import Weather from "../components/Weather";
 
 function LocationsDetails({ params }) {
   const [location, setLocation] = useState(null);
+  const [coordinates, setCoordinates] = useState(null);
 
   useEffect(() => {
     async function loadData() {
@@ -26,8 +28,15 @@ function LocationsDetails({ params }) {
         const filteredResult = result.find(
           (value) => value.slug === params.locationSlug
         );
-        if (filteredResult && filteredResult.coordinates) {
+        if (filteredResult) {
           setLocation(filteredResult);
+
+          if (filteredResult.coordinates) {
+            setCoordinates({
+              lat: parseFloat(filteredResult.coordinates.lat),
+              lng: parseFloat(filteredResult.coordinates.lng),
+            });
+          }
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -110,10 +119,11 @@ function LocationsDetails({ params }) {
               <div className="w-full lg:w-[30rem] h-[20rem] lg:h-[25rem]">
                 <Maps citySlug={params.locationSlug} />
               </div>
-              <div className="flex flex-col gap-4 mt-6 text-center lg:text-left">
-                <p className="font-semibold text-lg">Weather</p>
-                <p className="font-semibold text-lg">Current Time</p>
-              </div>
+              {coordinates && (
+                <div>
+                  <Weather lat={coordinates.lat} lng={coordinates.lng} />
+                </div>
+              )}
             </div>
           </div>
 

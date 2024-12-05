@@ -9,7 +9,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 
-function Maps({ citySlug }) {
+function Maps({ citySlug, onCoordinatesChange }) {
   const [open, setOpen] = useState(false);
 
   const [coordinates, setCoordinates] = useState(null);
@@ -21,18 +21,20 @@ function Maps({ citySlug }) {
           "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/cardList"
         );
         const result = await response.json();
-        console.log(result);
+
         const filteredResult = result.find((value) => {
-          console.log(value.slug);
-          console.log(citySlug);
           return value.slug === citySlug;
         });
-        console.log(filteredResult);
+
         if (filteredResult && filteredResult.coordinates) {
           setCoordinates({
             lat: parseFloat(filteredResult.coordinates.lat),
             lng: parseFloat(filteredResult.coordinates.lng),
           });
+          setCoordinates(newCoordinates);
+          if (onCoordinatesChange) {
+            onCoordinatesChange(newCoordinates);
+          }
         }
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -40,13 +42,13 @@ function Maps({ citySlug }) {
     }
 
     loadData();
-  }, [citySlug]);
+  }, [citySlug, onCoordinatesChange]);
 
   return (
     <>
       <APIProvider apiKey="AIzaSyBWAOvCRygXQyNndO8qFwqfCyJ1KurC2EY">
         {coordinates ? (
-          <div className="h-[30rem] w-[50rem]">
+          <div className="w-full h-[15rem] sm:w-[35rem] sm:h-[20rem] ">
             <Map
               defaultZoom={5}
               defaultCenter={{ lat: coordinates.lat, lng: coordinates.lng }}
