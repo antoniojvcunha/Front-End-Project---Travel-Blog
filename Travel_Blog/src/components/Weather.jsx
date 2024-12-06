@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Timezone from "../components/Timezone";
 
 function Weather({ lat, lng, locationName }) {
   const [forecast, setForecast] = useState(null);
@@ -52,7 +53,11 @@ function Weather({ lat, lng, locationName }) {
           </h2>
         </div>
 
-        <div>
+        <div className="flex flex-col">
+          <div className="text-lg font-bold text-left mb-2 text-blue-900">
+            {" "}
+            <Timezone lat={lat} lng={lng} />
+          </div>
           <img
             src={`https://openweathermap.org/img/wn/${forecast.list[0].weather[0].icon}@2x.png`}
             alt={forecast.list[0].weather[0].description}

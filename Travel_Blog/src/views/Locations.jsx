@@ -1,6 +1,13 @@
 import Card from "../components/Card";
-import Maps from "../components/Maps";
 import Navbar from "../components/Navbar";
+
+const CONTINENTS = [
+  { name: "Africa", className: "" },
+  { name: "Europe", className: "" },
+  { name: "America", className: "" },
+  { name: "Oceania", className: "" },
+  { name: "Asia", className: "" },
+];
 
 function Locations() {
   return (
@@ -13,41 +20,22 @@ function Locations() {
             <p className="text-xl">where i´ve been</p>
           </div>
         </div>
-        <div>
-          <h1 className="flex justify-center mt-10 text-3xl mb-10">Africa</h1>
-          <div className="bg-gradient-to-b from-transparent to-areia">
-            <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
-              <Card />
-            </div>
-          </div>
-
-          <h1 className="flex justify-center mt-10 text-3xl mb-10">Europe</h1>
-          <div className=" bg-gradient-to-b from-transparent to-areia">
-            <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
-              <Card />
-            </div>
-          </div>
-
-          <h1 className="flex justify-center mt-10 text-3xl mb-10">America</h1>
-          <div className=" bg-gradient-to-b from-transparent to-areia">
-            <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
-              <Card />
-            </div>
-          </div>
-
-          <h1 className="flex justify-center mt-10 text-3xl mb-10">Oceania</h1>
-          <div className=" bg-gradient-to-b from-transparent to-areia">
-            <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
-              <Card />
-            </div>
-
-            <h1 className="flex justify-center mt-10 text-3xl mb-10">Asia</h1>
-            <div className=" bg-gradient-to-b from-transparent to-areia">
-              <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
-                <Card />
+        <div className="mt-10">
+          {CONTINENTS.map((continent) => (
+            <div
+              key={continent.name}
+              className={`mb-10 ${continent.className}`}
+            >
+              <h1 className="flex justify-center text-3xl mb-4">
+                {continent.name}
+              </h1>
+              <div className="bg-gradient-to-b from-transparent to-areia">
+                <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
+                  <Card />
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
