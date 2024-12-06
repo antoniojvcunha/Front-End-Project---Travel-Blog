@@ -9,7 +9,6 @@ import "../styles/swiperCustom.css";
 function Slide() {
   const [card, setCard] = useState([]);
 
-  // Fetch para carregar os dados
   useEffect(() => {
     async function loadData() {
       try {
@@ -17,7 +16,7 @@ function Slide() {
           "https://674111a9d0b59228b7f223f1.mockapi.io/api/v1/cardList"
         );
         const result = await response.json();
-        setCard(result); // Atualiza o estado com os dados recebidos
+        setCard(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -46,8 +45,7 @@ function Slide() {
                 className="w-45 h-[20rem] object-cover bg-cover bg-center rounded-2xl hover:scale-105 duration-500 group relativ cursor-pointer"
               >
                 <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 opacity-0 group-hover:opacity-100 duration-1000">
-                  <p className="text-sm">{item.description}</p>
-                  <h3 className="text-lg font-bold">{item.name}</h3>
+                  <h3 className="text-lg font-bold text-center">{item.name}</h3>
                 </div>
               </div>
             </SwiperSlide>

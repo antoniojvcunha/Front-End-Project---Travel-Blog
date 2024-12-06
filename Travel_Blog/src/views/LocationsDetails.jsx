@@ -48,18 +48,16 @@ function LocationsDetails({ params }) {
 
   return (
     <>
+      <Navbar />
       {location ? (
-        <div className="bg-ceu bg-cover min-w-screen min-h-screen text-black overflow-hidden">
-          <div className="bg-black">
-            <Navbar />
-          </div>
+        <div className="bg-white bg-cover min-w-screen min-h-screen text-black overflow-hidden">
           <SlideBackground params={{ locationSlug: params.locationSlug }} />
-          <div className="flex flex-col lg:flex-row gap-10 my-12 mx-6 lg:mx-24">
+          <div className="flex flex-col lg:flex-row justify-around gap-10 my-12 mx-6 lg:mx-24">
             <div className="mt-10 text-justify flex flex-col gap-6 max-w-full lg:max-w-[55rem]">
               <h1 className="text-2xl lg:text-3xl font-bold">Overview</h1>
               <p className="text-sm lg:text-base">{location.description}</p>
 
-              <div className="flex flex-col gap-4 items-center md:items-start">
+              <div className="flex flex-col gap-4 items-center lg:items-start">
                 <h1 className="text-2xl lg:text-3xl font-bold text-center md:text-left">
                   Some Facts
                 </h1>
@@ -115,15 +113,15 @@ function LocationsDetails({ params }) {
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:items-start">
-              <div className="w-full lg:w-[30rem] h-[20rem] lg:h-[25rem]">
+            <div className="flex flex-col items-center gap-5">
+              <div className="w-full h-[15rem] sm:h-[20rem] lg:w-[30rem] lg:h-[25rem] flex justify-center items-center">
                 <Maps citySlug={params.locationSlug} />
               </div>
               {location && location.coordinates && (
                 <Weather
                   lat={location.coordinates.lat}
                   lng={location.coordinates.lng}
-                  locationName={location.name} // Passando o nome da localização para o Weather
+                  locationName={location.name}
                 />
               )}
             </div>

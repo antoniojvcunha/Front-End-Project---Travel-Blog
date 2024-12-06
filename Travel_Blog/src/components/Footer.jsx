@@ -71,7 +71,7 @@ function Footer() {
         </div>
 
         <div className="mx-6 py-10 text-center md:text-left">
-          <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid-1 grid gap-8 md:grid-cols-2  lg:grid-cols-4">
             <div className="">
               <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
                 <span className="me-3 [&>svg]:h-4 [&>svg]:w-4">

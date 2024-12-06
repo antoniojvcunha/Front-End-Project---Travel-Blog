@@ -12,7 +12,7 @@ const CONTINENTS = [
 function Locations() {
   return (
     <>
-      <div className="bg-ceu bg-cover min-w-screen min-h-screen text-black overflow-hidden">
+      <div className="bg-white bg-cover min-w-screen min-h-screen text-black overflow-hidden">
         <Navbar />
         <div className="bg-[url('/images/1.jpg')] bg-center bg-cover bg-no-repeat w-full h-[38rem] flex flex-col text-center justify-center">
           <div className="uppercase flex flex-col gap-4">
@@ -29,7 +29,7 @@ function Locations() {
               <h1 className="flex justify-center text-3xl mb-4">
                 {continent.name}
               </h1>
-              <div className="bg-gradient-to-b from-transparent to-areia">
+              <div className="bg-gradient-to-b from-transparent to-gray-300">
                 <div className="flex hover:bg-areia hover:bg-opacity-15 duration-300">
                   <Card />
                 </div>

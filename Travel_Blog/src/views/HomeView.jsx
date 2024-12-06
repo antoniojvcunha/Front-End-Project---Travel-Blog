@@ -6,7 +6,7 @@ function HomeView() {
   return (
     <>
       <Navbar />
-      <div className="my-24 ml-24">
+      <div>
         <Hero />
       </div>
       <Footer />
