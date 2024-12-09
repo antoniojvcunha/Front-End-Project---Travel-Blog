@@ -1,161 +1,87 @@
 import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
 import Navbar from "../components/Navbar";
 
 function AboutMe() {
   return (
     <>
-      <div className="bg-ceu bg-cover min-h-screen text-black">
-        <Navbar />
-        <div className="mt-36">
-          {/* Alinhamento consistente com largura fixa */}
-          <div className="flex justify-center">
-            <div className="w-[90rem] flex justify-between items-center">
-              <div className="flex flex-col gap-6">
-                <h1 className="text-2xl">This is my story</h1>
-                <p className="w-[40rem] text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-                  minus, rem modi aperiam, nihil aspernatur dolores enim at,
-                  quae voluptatum eligendi voluptas velit maxime. Alias eaque
-                  quidem fugiat voluptatem perferendis!
-                </p>
-              </div>
-              <div className="bg-white w-[24rem] p-4">
-                <img className="w-96" src="./public/images/me.jpg" alt="me" />
-              </div>
-            </div>
+      <Navbar />
+
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-around gap-10 items-center mt-10 my-12 mx-6 lg:mx-24">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">About Me</h2>
+            <p>Get to know me</p>
+            <p className="mt-5">
+              I'm Antonio, a passionate traveler and adventure-seeker. This blog
+              shares my personal experiences from incredible destinations around
+              the world, offering practical tips and insights on how you can
+              have your own thrilling adventures.
+            </p>
+
+            <h3 className="mt-10 text-xl text-blue-600">
+              My Journey as a Traveler
+            </h3>
+            <p>
+              My travel journey began [number] years ago, when [brief story].
+              Since then, I've accumulated a wealth of experiences in [number]
+              countries/cities and am always seeking new adventures. This blog
+              is my way of sharing these special moments with fellow travel
+              enthusiasts.{" "}
+            </p>
+
+            <h3 className="mt-10 text-xl text-blue-600">
+              What This Blog Offers
+            </h3>
+            <p>
+              On my site, you'll find: Detailed travel accounts, including
+              practical tips and unique insights. Travel guides based on
+              personal experiences. Resources on how to plan semi-annual or
+              annual adventures. Reflections on culture, nature, and people I've
+              encountered along the way.
+            </p>
+
+            <h3 className="mt-10 text-xl text-blue-600">
+              My Experience and Expertise
+            </h3>
+            <p>
+              With [number] years of travel under my belt, I've gained practical
+              knowledge that I share here. My approach is based on real
+              experiences, not just theory. I hope to inspire others to explore
+              beyond their comfort zones.
+            </p>
+
+            <h3 className="mt-10 text-xl text-blue-600">My Purpose</h3>
+            <p>
+              My goal is to inspire you to step out of your comfort zone and
+              explore the world. I want to show that the best adventures often
+              lie off the beaten path and that each journey is an opportunity
+              for growth and learning.
+            </p>
+
+            <p>
+              If you're ready to join me on this journey of discoveries and
+              adventures, stay tuned! Follow me on social media or subscribe to
+              the newsletter for regular updates on new posts and exclusive
+              tips.
+            </p>
           </div>
 
-          <div className="flex justify-center mt-36">
-            <div className="w-[90rem] flex justify-between items-center">
-              <div className="bg-white w-[24rem] p-4">
-                <img className="w-96" src="./public/images/me.jpg" alt="me" />
-              </div>
-              <div className="flex flex-col gap-6">
-                <h1 className="text-2xl">This is my story</h1>
-                {/* Progress Bars */}
-                <progress className="progress w-56" value={0} max="100">
-                  hello
-                </progress>
-                <progress
-                  className="progress w-56"
-                  value="10"
-                  max="100"
-                ></progress>
-                <progress
-                  className="progress w-56"
-                  value="40"
-                  max="100"
-                ></progress>
-                <progress
-                  className="progress w-56"
-                  value="70"
-                  max="100"
-                ></progress>
-                <progress
-                  className="progress w-56"
-                  value="100"
-                  max="100"
-                ></progress>
-              </div>
-            </div>
+          <div className="w-full h[15rem] sm:h[20rem] lg:[30rem] lg:h-[25rem]">
+            <img
+              src="./images/me.jpg"
+              alt="Author"
+              className="w-full h-auto object-cover rounded-lg shadow-md"
+            />
           </div>
+        </div>
 
-          <div className="flex justify-center items-center min-h-screen">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-[80rem] p-4 bg-white rounded-lg">
-              <div class="grid gap-4">
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="grid gap-4">
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="grid gap-4">
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="grid gap-4">
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="h-auto max-w-full rounded-lg"
-                    src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        <h3 className="text-2xl mt-10 text-center">
+          "The world is a book, and those who do not travel read only one page."
+        </h3>
+
+        <div className="mt-10">
+          <Gallery />
         </div>
 
         <Footer />
