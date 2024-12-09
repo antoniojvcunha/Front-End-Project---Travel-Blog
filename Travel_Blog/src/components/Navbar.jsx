@@ -71,30 +71,35 @@ function Navbar() {
                   </button>
                   <div className="absolute left-0 hidden group-hover:block bg-white border border-gray-200 rounded shadow-md w-48 dark:bg-gray-700">
                     <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                      {["Africa", "Asia", "Europe", "America", "Oceania"].map(
-                        (continent, index) => (
-                          <li key={index} className="relative group">
-                            <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                              {continent}
-                              <svg
-                                className="w-2.5 h-2.5 ms-2.5"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 10 6"
-                              >
-                                <path
-                                  stroke="currentColor"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="2"
-                                  d="m1 1 4 4 4-4"
-                                />
-                              </svg>
-                            </button>
-                          </li>
-                        )
-                      )}
+                      {[
+                        "Africa",
+                        "Asia",
+                        "Europe",
+                        "North America",
+                        "South America",
+                        "Oceania",
+                      ].map((continent, index) => (
+                        <li key={index} className="relative group">
+                          <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            {continent}
+                            <svg
+                              className="w-2.5 h-2.5 ms-2.5"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                            >
+                              <path
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="m1 1 4 4 4-4"
+                              />
+                            </svg>
+                          </button>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </li>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
-function Card() {
+function Card({ continent }) {
   const [card, setCard] = useState([]);
 
-  useEffect(function () {
+  useEffect(() => {
     loadData();
   }, []);
 
@@ -14,7 +14,10 @@ function Card() {
     );
     const result = await response.json();
 
-    setCard(result);
+    const filteredCards = result.filter(
+      (cardItem) => cardItem.continent === continent
+    );
+    setCard(filteredCards);
   }
 
   return (
