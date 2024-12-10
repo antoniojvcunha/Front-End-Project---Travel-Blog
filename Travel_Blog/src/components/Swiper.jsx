@@ -34,7 +34,7 @@ function Slide() {
         loop={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper w-[45rem] h-[27rem] "
+        className="mySwiper w-[45rem] h-[27rem] py-3 px-2"
       >
         {card.length > 0 ? (
           card.map((item) => (
@@ -42,9 +42,9 @@ function Slide() {
               <div
                 key={item.id}
                 style={{ backgroundImage: `url(${item.thumbnail})` }}
-                className="w-45 h-[20rem] object-cover bg-cover bg-center rounded-2xl hover:scale-105 duration-500 group relativ cursor-pointer"
+                className="w-45 h-[20rem] object-cover bg-cover bg-center rounded-2xl hover:scale-105 duration-500 group relative cursor-pointer"
               >
-                <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4 opacity-0 group-hover:opacity-100 duration-1000">
+                <div className="absolute bottom-0 w-full rounded-2xl bg-black bg-opacity-60 text-white p-4 opacity-0 group-hover:opacity-100 duration-1000">
                   <h3 className="text-lg font-bold text-center">{item.name}</h3>
                 </div>
               </div>
