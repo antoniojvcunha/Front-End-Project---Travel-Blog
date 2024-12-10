@@ -81,7 +81,7 @@ function Navbar() {
                       ].map((continent, index) => (
                         <li key={index} className="relative group">
                           <button className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                            {continent}
+                            🌍 {continent}
                             <svg
                               className="w-2.5 h-2.5 ms-2.5"
                               aria-hidden="true"

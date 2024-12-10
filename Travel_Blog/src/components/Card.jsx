@@ -22,7 +22,7 @@ function Card({ continent }) {
 
   return (
     <>
-      <div className="hover:bg-areia hover:bg-opacity-15 duration-300">
+      <div className=" hover:bg-opacity-15 duration-300">
         <div className="flex justify-around flex-wrap px-3 py-3 mt-20 gap-8">
           {card.length > 0 ? (
             card.map((cardItem, index) => (
