@@ -72,7 +72,7 @@ function Weather({ lat, lng, locationName }) {
         {days.map((day, index) => (
           <div
             key={index}
-            className="hover:bg-areia hover:bg-opacity-15 duration-300 p-3 rounded-lg shadow-md flex flex-col items-center"
+            className="hover:bg-areia hover:bg-opacity-15 duration-300 p-2 rounded-lg shadow-md flex flex-col items-center"
           >
             <h3 className="text-center text-[0.7rem] sm:text-xs font-extralight">
               {new Date(day.dt * 1000).toLocaleDateString("en-US", {

@@ -52,68 +52,92 @@ function LocationsDetails({ params }) {
       {location ? (
         <div className="bg-white bg-cover min-w-screen min-h-screen text-black overflow-hidden">
           <SlideBackground params={{ locationSlug: params.locationSlug }} />
-          <div className="flex flex-col lg:flex-row justify-around gap-10 my-12 mx-6 lg:mx-24">
-            <div className="mt-10 text-justify flex flex-col gap-6 max-w-full lg:max-w-[55rem]">
+          <div className="flex flex-col lg:flex-row justify-around gap-10 my-12 mx-6 lg:mx-24 lg:items-start">
+            <div className="mt-10 text-justify items-center flex flex-col gap-10 max-w-full lg:max-w-[55rem]">
               <h1 className="text-2xl lg:text-3xl font-bold">Overview</h1>
-              <p className="text-sm lg:text-base">{location.description}</p>
+              <p className="text-center text-justify text-sm lg:text-base">
+                {location.description}
+              </p>
 
-              <div className="flex flex-col gap-4 items-center lg:items-start">
-                <h1 className="text-2xl lg:text-3xl font-bold text-center md:text-left">
+              <div className="flex flex-col gap-10 items-center ">
+                <h1 className="text-2xl lg:text-3xl font-bold text-center">
                   Some Facts
                 </h1>
-                <div className="grid grid-cols-1 content-center sm:grid-cols-2 gap-4 justify-items-center md:justify-items-start">
+                <div className="grid grid-cols-1 content-center sm:grid-cols-2 gap-10 justify-items-center ">
                   <div className="flex gap-3 items-center">
-                    <LanguageIcon className="h-6 w-6 text-blue-500" />
-                    <div className="flex flex-col text-center">
-                      <p className="text-sm font-semibold">Language:</p>
-                      <p className="text-xs">{location.language}</p>
+                    <LanguageIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
+                    <div className="flex flex-col gap-2 text-center">
+                      <p className="text-sm font-semibold lg:text-lg">
+                        Language:
+                      </p>
+                      <p className="text-xs lg:text-base">
+                        {location.language}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <CurrencyDollarIcon className="h-6 w-6 text-blue-500" />
-                    <div className="flex flex-col text-center">
-                      <p className="text-sm font-semibold">Currency:</p>
-                      <p className="text-xs">{location.currency}</p>
+                    <CurrencyDollarIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
+                    <div className="flex flex-col gap-2 text-center">
+                      <p className="text-sm font-semibold lg:text-lg">
+                        Currency:
+                      </p>
+                      <p className="text-xs lg:text-base">
+                        {location.currency}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <BookOpenIcon className="h-6 w-6 text-blue-500" />
-                    <div className="flex flex-col text-center">
-                      <p className="text-sm font-semibold">Religion:</p>
-                      <p className="text-xs">{location.religion}</p>
+                    <BookOpenIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
+                    <div className="flex flex-col gap-2 text-center">
+                      <p className="text-sm font-semibold lg:text-lg">
+                        Religion:
+                      </p>
+                      <p className="text-xs lg:text-base">
+                        {location.religion}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <SunIcon className="h-6 w-6 text-blue-500" />
-                    <div className="flex flex-col text-center">
-                      <p className="text-sm font-semibold">Climate:</p>
-                      <p className="text-xs">{location.climate}</p>
+                    <SunIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
+                    <div className="flex flex-col gap-2 text-center">
+                      <p className="text-sm font-semibold lg:text-lg">
+                        Climate:
+                      </p>
+                      <p className="text-xs lg:text-base">{location.climate}</p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <BuildingLibraryIcon className="h-6 w-6 text-blue-500" />
-                    <div className="flex flex-col text-center">
-                      <p className="text-sm font-semibold">Attractions:</p>
-                      <p className="text-xs">{location.attractions}</p>
+                    <BuildingLibraryIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
+                    <div className="flex flex-col gap-2 text-center">
+                      <p className="text-sm font-semibold lg:text-lg">
+                        Attractions:
+                      </p>
+                      <p className="text-xs lg:text-base">
+                        {location.attractions}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex gap-3 items-center">
-                    <UsersIcon className="h-6 w-6 text-blue-500" />
-                    <div className="flex flex-col text-center">
-                      <p className="text-sm font-semibold">Population:</p>
-                      <p className="text-xs">{location.population}</p>
+                    <UsersIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
+                    <div className="flex flex-col gap-2 text-center">
+                      <p className="text-sm font-semibold lg:text-lg">
+                        Population:
+                      </p>
+                      <p className="text-xs lg:text-base">
+                        {location.population}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-5">
+            <div className="flex flex-col items-center gap-8">
               <div className="w-full h-[15rem] sm:h-[20rem] lg:w-[30rem] lg:h-[25rem] flex justify-center items-center">
                 <Maps citySlug={params.locationSlug} />
               </div>

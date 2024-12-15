@@ -9,7 +9,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 
-function Maps({ citySlug, onCoordinatesChange }) {
+function Maps({ citySlug, locationName, onCoordinatesChange }) {
   const [open, setOpen] = useState(false);
 
   const [coordinates, setCoordinates] = useState(null);
@@ -59,9 +59,9 @@ function Maps({ citySlug, onCoordinatesChange }) {
                 onClick={() => setOpen(true)}
               >
                 <Pin
-                  background={"grey"}
-                  borderColor={"green"}
-                  glyphColor={"purple"}
+                  background={"red"}
+                  borderColor={"black"}
+                  glyphColor={"black"}
                 />
               </AdvancedMarker>
 
@@ -70,7 +70,7 @@ function Maps({ citySlug, onCoordinatesChange }) {
                   position={{ lat: coordinates.lat, lng: coordinates.lng }}
                   onCloseClick={() => setOpen(false)}
                 >
-                  <p>Estou em {coordinates.name}</p>
+                  <p>Estou em {locationName}</p>
                 </InfoWindow>
               )}
             </Map>
