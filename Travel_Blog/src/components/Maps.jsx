@@ -48,7 +48,7 @@ function Maps({ citySlug, locationName, onCoordinatesChange }) {
     <>
       <APIProvider apiKey="AIzaSyBWAOvCRygXQyNndO8qFwqfCyJ1KurC2EY">
         {coordinates ? (
-          <div className="w-full h-[15rem] sm:w-[35rem] sm:h-[20rem] ">
+          <div className="w-full h-[20rem] ">
             <Map
               defaultZoom={5}
               defaultCenter={{ lat: coordinates.lat, lng: coordinates.lng }}

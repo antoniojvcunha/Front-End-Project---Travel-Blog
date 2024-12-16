@@ -20,9 +20,7 @@ export default {
   },
   plugins: [
     require('flowbite/plugin'),
-    require('daisyui'),
+    
   ],
-  daisyui: {
-    themes: false,
-  },
+  
 };

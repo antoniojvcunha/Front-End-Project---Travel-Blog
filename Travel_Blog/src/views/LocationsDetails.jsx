@@ -55,18 +55,19 @@ function LocationsDetails({ params }) {
           <div className="flex flex-col lg:flex-row justify-around gap-10 my-12 mx-6 lg:mx-24 lg:items-start">
             <div className="mt-10 text-justify items-center flex flex-col gap-10 max-w-full lg:max-w-[55rem]">
               <h1 className="text-2xl lg:text-3xl font-bold">Overview</h1>
-              <p className="text-center text-justify text-sm lg:text-base">
+              <p className="text-justify text-sm lg:text-base">
                 {location.description}
               </p>
 
-              <div className="flex flex-col gap-10 items-center ">
-                <h1 className="text-2xl lg:text-3xl font-bold text-center">
-                  Some Facts
-                </h1>
-                <div className="grid grid-cols-1 content-center sm:grid-cols-2 gap-10 justify-items-center ">
-                  <div className="flex gap-3 items-center">
-                    <LanguageIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
-                    <div className="flex flex-col gap-2 text-center">
+              <div className="flex flex-col gap-10 items-center">
+                <h1 className="text-2xl lg:text-3xl font-bold">Some Facts</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-16">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-300 hover:bg-blue-500 transition duration-300">
+                      <LanguageIcon className="h-6 w-6 text-black sm:h-10 sm:w-10" />
+                    </div>
+
+                    <div>
                       <p className="text-sm font-semibold lg:text-lg">
                         Language:
                       </p>
@@ -76,9 +77,11 @@ function LocationsDetails({ params }) {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-center">
-                    <CurrencyDollarIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
-                    <div className="flex flex-col gap-2 text-center">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-300 hover:bg-blue-500 transition duration-300">
+                      <CurrencyDollarIcon className="h-6 w-6 text-black sm:h-10 sm:w-10" />
+                    </div>
+                    <div>
                       <p className="text-sm font-semibold lg:text-lg">
                         Currency:
                       </p>
@@ -88,9 +91,11 @@ function LocationsDetails({ params }) {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-center">
-                    <BookOpenIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
-                    <div className="flex flex-col gap-2 text-center">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-300 hover:bg-blue-500 transition duration-300">
+                      <BookOpenIcon className="h-6 w-6 text-black sm:h-10 sm:w-10" />
+                    </div>
+                    <div>
                       <p className="text-sm font-semibold lg:text-lg">
                         Religion:
                       </p>
@@ -100,9 +105,11 @@ function LocationsDetails({ params }) {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-center">
-                    <SunIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
-                    <div className="flex flex-col gap-2 text-center">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-300 hover:bg-blue-500 transition duration-300">
+                      <SunIcon className="h-6 w-6 text-black sm:h-10 sm:w-10" />
+                    </div>
+                    <div>
                       <p className="text-sm font-semibold lg:text-lg">
                         Climate:
                       </p>
@@ -110,9 +117,11 @@ function LocationsDetails({ params }) {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-center">
-                    <BuildingLibraryIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
-                    <div className="flex flex-col gap-2 text-center">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-300 hover:bg-blue-500 transition duration-300">
+                      <BuildingLibraryIcon className="h-6 w-6 text-black sm:h-10 sm:w-10" />
+                    </div>
+                    <div>
                       <p className="text-sm font-semibold lg:text-lg">
                         Attractions:
                       </p>
@@ -122,9 +131,11 @@ function LocationsDetails({ params }) {
                     </div>
                   </div>
 
-                  <div className="flex gap-3 items-center">
-                    <UsersIcon className="h-6 w-6 text-blue-500 md:h-10 md:w-10" />
-                    <div className="flex flex-col gap-2 text-center">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-300 hover:bg-blue-500 transition duration-300">
+                      <UsersIcon className="h-6 w-6 text-black sm:h-10 sm:w-10" />
+                    </div>
+                    <div>
                       <p className="text-sm font-semibold lg:text-lg">
                         Population:
                       </p>
@@ -137,8 +148,8 @@ function LocationsDetails({ params }) {
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-8">
-              <div className="w-full h-[15rem] sm:h-[20rem] lg:w-[30rem] lg:h-[25rem] flex justify-center items-center">
+            <div className="flex flex-col items-center gap-20 sm:gap-8">
+              <div className="w-full mt-10 sm:mt-0 h-[15rem] sm:h-[20rem] lg:w-[30rem] lg:h-[25rem] flex justify-center items-center">
                 <Maps citySlug={params.locationSlug} />
               </div>
               {location && location.coordinates && (

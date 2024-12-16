@@ -42,21 +42,19 @@ function Weather({ lat, lng, locationName }) {
   const days = forecast.list.filter((item, index) => index % 8 === 0);
 
   return (
-    <div className="backdrop-blur-md p-4 rounded-lg shadow-2xl w-full max-w-[30rem] mx-auto">
+    <div className="backdrop-blur-md p-4 rounded-lg shadow-2xl w-full mx-auto">
       <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start">
         {/* Informações principais de temperatura e localização */}
         <div className="text-center sm:text-left">
-          <h2 className="text-2xl font-bold text-blue-900 mb-2">
+          <h2 className="text-2xl font-bold text-black mb-2">
             {Math.round(forecast.list[0].main.temp)}°C
           </h2>
-          <h2 className="text-lg font-bold text-blue-900 mb-2">
-            {locationName}
-          </h2>
+          <h2 className="text-lg font-bold text-black mb-2">{locationName}</h2>
         </div>
 
         {/* Timezone e ícone do clima */}
         <div className="flex flex-col items-center sm:items-end">
-          <div className="text-lg font-bold text-blue-900 mb-2">
+          <div className="text-lg font-bold text-black mb-2">
             <Timezone lat={lat} lng={lng} />
           </div>
           <img
