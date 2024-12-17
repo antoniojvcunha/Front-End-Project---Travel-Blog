@@ -36,7 +36,7 @@ function Navbar() {
     <nav className="bg-white border-black dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3">
-          <img src="./images/logo.png" className="h-10" alt="Traveller" />
+          <img src="/images/logo.png" className="h-10" alt="Traveller" />
         </Link>
 
         {/* Menu de Desktop */}

@@ -16,7 +16,7 @@ function Hero() {
           </p>
         </div>
 
-        <div className="w-full overflow-visible md:overflow-hidden lg:w-auto flex justify-center lg:justify-start lg:-mr-[10rem] bg-yellow-300">
+        <div className="w-full overflow-visible md:overflow-hidden lg:w-auto flex justify-center lg:justify-start lg:-mr-[10rem] bg-yellow-30">
           <div className="mt-8 h-[30rem] lg:mt-32 lg:ml-[14rem] bg-blac">
             <Swiper />
           </div>

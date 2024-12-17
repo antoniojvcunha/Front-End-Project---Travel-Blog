@@ -27,13 +27,14 @@ function Maps({ citySlug, locationName, onCoordinatesChange }) {
         });
 
         if (filteredResult && filteredResult.coordinates) {
-          setCoordinates({
+          const updatedCoordinates = {
             lat: parseFloat(filteredResult.coordinates.lat),
             lng: parseFloat(filteredResult.coordinates.lng),
-          });
-          setCoordinates(newCoordinates);
+          };
+          setCoordinates(updatedCoordinates);
+
           if (onCoordinatesChange) {
-            onCoordinatesChange(newCoordinates);
+            onCoordinatesChange(updatedCoordinates);
           }
         }
       } catch (error) {

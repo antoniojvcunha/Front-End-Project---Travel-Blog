@@ -79,10 +79,6 @@ function AboutMe() {
           "The world is a book, and those who do not travel read only one page."
         </p>
 
-        <div className="mt-10">
-          <Gallery />
-        </div>
-
         <Footer />
       </div>
     </>

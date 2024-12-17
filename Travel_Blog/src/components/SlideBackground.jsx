@@ -5,8 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "../styles/slideBackground.css";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Weather from "./Weather"; // Importe o componente Weather
 

@@ -55,6 +55,7 @@ function LocationsDetails({ params }) {
           <div className="flex flex-col lg:flex-row justify-around gap-10 my-12 mx-6 lg:mx-24 lg:items-start">
             <div className="mt-10 text-justify items-center flex flex-col gap-10 max-w-full lg:max-w-[55rem]">
               <h1 className="text-2xl lg:text-3xl font-bold">Overview</h1>
+
               <p className="indent-4 text-justify text-sm lg:text-base">
                 {location.description}
               </p>
@@ -161,8 +162,6 @@ function LocationsDetails({ params }) {
               )}
             </div>
           </div>
-
-          <Gallery />
 
           <Footer />
         </div>
