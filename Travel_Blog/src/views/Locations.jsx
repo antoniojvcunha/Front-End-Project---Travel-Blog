@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Locations() {
   const [continents, setContinents] = useState([]);
@@ -59,6 +60,7 @@ function Locations() {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,7 @@
   position: relative;
   height: fit-content;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
   width: 50px; /* Largura do botão */
@@ -42,4 +43,12 @@
     0.1
   ); /* Fundo levemente transparente ao hover */
   transform: scale(1.1); /* Aumenta ligeiramente */
+}
+/* Esconder botões em telas menores */
+@media screen and (max-width: 768px) {
+  /* Smartphones e tablets */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Esconde os botões */
+  }
 }

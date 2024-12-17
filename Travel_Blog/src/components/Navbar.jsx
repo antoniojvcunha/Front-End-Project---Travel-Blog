@@ -35,20 +35,18 @@ function Navbar() {
   return (
     <nav className="bg-white border-black dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-        {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
           <img src="./images/logo.png" className="h-10" alt="Traveller" />
         </Link>
 
         {/* Menu de Desktop */}
-        <ul className="hidden md:flex md:flex-row md:space-x-10 md:text-lg font-bold text-gray-800">
+        <ul className="z-10 hidden md:flex md:flex-row md:space-x-10 md:text-lg font-bold text-gray-800">
           <li>
             <Link href="/" className="hover:text-blue-600">
               Home
             </Link>
           </li>
 
-          {/* Dropdown Locations */}
           <li className="relative group">
             <Link
               href="/locations"
@@ -85,9 +83,8 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Botão Hamburger */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)} // Abre/fecha o menu
+          onClick={() => setMenuOpen(!menuOpen)}
           className={`absolute top-4 right-4 z-50 p-2 w-10 h-10 flex items-center justify-center rounded-lg md:hidden text-gray-500 bg-white shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 ${
             menuOpen ? "text-black" : ""
           }`}
@@ -109,7 +106,6 @@ function Navbar() {
           </svg>
         </button>
 
-        {/* Menu Responsivo - Mobile */}
         <div
           className={`absolute top-0 left-0 w-full h-screen bg-white flex items-center justify-center z-40 transition-transform duration-300 ${
             menuOpen ? "translate-y-0" : "-translate-y-full"
@@ -122,7 +118,6 @@ function Navbar() {
               </Link>
             </li>
 
-            {/* Dropdown Locations */}
             <li className="relative group">
               <Link
                 href="/locations"

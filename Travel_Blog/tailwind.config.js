@@ -16,6 +16,7 @@ export default {
         "insta": "#C105B5",
         "ceu": "#FAEBD8",
       }
+     
     },
   },
   plugins: [

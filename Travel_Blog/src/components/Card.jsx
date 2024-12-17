@@ -31,7 +31,7 @@ function Card({ continent }) {
                   style={{ backgroundImage: `url(${cardItem.thumbnail})` }}
                   className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-cover bg-center w-[38rem] h-[18rem] flex flex-col justify-end text-center hover:scale-105 duration-500 group"
                 >
-                  <div className="px-6 py-4 text-white bg-black bg-opacity-60 opacity-80 group-hover:opacity-100 duration-1000">
+                  <div className="px-6 py-4 text-white bg-black bg-opacity-50 opacity-100 group-hover:bg-opacity-80 duration-1000">
                     <div className="font-bold text-xl mb-2">
                       {cardItem.name}
                     </div>

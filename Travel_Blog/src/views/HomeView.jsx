@@ -5,11 +5,16 @@ import Navbar from "../components/Navbar";
 function HomeView() {
   return (
     <>
-      <Navbar />
-      <div>
-        <Hero />
+      <div
+        className="flex flex-col min-h-screen bg-cover bg-center"
+        style={{ backgroundImage: "url('./images/wallpaper.jpg')" }}
+      >
+        <Navbar />
+        <div className="">
+          <Hero />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
