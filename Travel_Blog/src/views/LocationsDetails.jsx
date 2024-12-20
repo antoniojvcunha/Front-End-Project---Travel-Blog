@@ -52,6 +52,13 @@ function LocationsDetails({ params }) {
       {location ? (
         <div className="bg-white bg-cover min-w-screen min-h-screen text-black overflow-hidden">
           <SlideBackground params={{ locationSlug: params.locationSlug }} />
+          <div className="flex items-center justify-center mt-5">
+            <div className="flex flex-col items-center justify-center text-sm lg:text-base">
+              <p className="mt-5">Date of visit:</p>
+              <p className="mt-2 underline">{location.visit}</p>
+            </div>
+          </div>
+
           <div className="flex flex-col lg:flex-row justify-around gap-10 my-12 mx-6 lg:mx-24 lg:items-start">
             <div className="mt-10 text-justify items-center flex flex-col gap-10 max-w-full lg:max-w-[55rem]">
               <h1 className="text-2xl lg:text-3xl font-bold">Overview</h1>

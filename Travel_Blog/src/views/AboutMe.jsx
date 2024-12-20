@@ -12,18 +12,17 @@ function AboutMe() {
           <div className="flex flex-col gap-2">
             <h3 className="mt-5 text-blue-600 sm:text-xl">Get to know me...</h3>
             <p className="indent-4 text-sm sm:text-base">
-              I'm Antonio, a passionate traveler and adventure-seeker. This blog
-              shares my personal experiences from incredible destinations around
-              the world, offering practical tips and insights on how you can
-              have your own thrilling adventures.
+              I'm Antonio, a 26-year-old guy who is a passionate and adventurous
+              traveler. This blog shares my personal experiences of amazing
+              destinations around the world.
             </p>
 
             <h3 className="mt-5 text-blue-600 sm:text-xl">
               My Journey as a Traveler
             </h3>
             <p className="indent-4 text-sm sm:text-base">
-              My travel journey began [number] years ago, when [brief story].
-              Since then, I've accumulated a wealth of experiences in [number]
+              My travel journey began 8 years ago, when turn 18. Since then,
+              I've accumulated a wealth of experiences in several
               countries/cities and am always seeking new adventures. This blog
               is my way of sharing these special moments with fellow travel
               enthusiasts.{" "}
@@ -33,18 +32,17 @@ function AboutMe() {
               What This Blog Offers
             </h3>
             <p className="indent-4 text-sm sm:text-base">
-              On my site, you'll find: Detailed travel accounts, including
-              practical tips and unique insights. Travel guides based on
-              personal experiences. Resources on how to plan semi-annual or
-              annual adventures. Reflections on culture, nature, and people I've
-              encountered along the way.
+              On my website, you will find: several detailed information of the
+              places I visited, from monuments to some history of these. You
+              also have the opportunity to take notes on the main facts of each
+              place, such as the local currency, climate, language and others.
             </p>
 
             <h3 className="mt-5 text-blue-600 sm:text-xl">
               My Experience and Expertise
             </h3>
             <p className="indent-4 text-sm sm:text-base">
-              With [number] years of travel under my belt, I've gained practical
+              With 8 years of travel under my belt, I've gained practical
               knowledge that I share here. My approach is based on real
               experiences, not just theory. I hope to inspire others to explore
               beyond their comfort zones.
@@ -60,9 +58,8 @@ function AboutMe() {
 
             <p className="indent-4 text-sm sm:text-base">
               If you're ready to join me on this journey of discoveries and
-              adventures, stay tuned! Follow me on social media or subscribe to
-              the newsletter for regular updates on new posts and exclusive
-              tips.
+              adventures, stay tuned! Follow me on social media for regular
+              updates on new posts and exclusive tips.
             </p>
           </div>
 
