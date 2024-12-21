@@ -10,7 +10,8 @@ function HomeView() {
         style={{ backgroundImage: "url('./images/wallpaper.jpg')" }}
       >
         <Navbar />
-        <div className="">
+
+        <div className="overflow-hidden">
           <Hero />
         </div>
         <Footer />

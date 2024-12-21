@@ -71,7 +71,9 @@ function Maps({ citySlug, locationName, onCoordinatesChange }) {
                   position={{ lat: coordinates.lat, lng: coordinates.lng }}
                   onCloseClick={() => setOpen(false)}
                 >
-                  <p>Estou em {locationName}</p>
+                  <p className="w-20 h-8">
+                    lat: {coordinates.lat}, lng: {coordinates.lng}
+                  </p>
                 </InfoWindow>
               )}
             </Map>

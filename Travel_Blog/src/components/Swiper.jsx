@@ -34,7 +34,7 @@ function Slide() {
         loop={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper overflow-visible w-[45rem] h-[27rem] py-3 px-2 md:overflow-hidden"
+        className="mySwiper overflow-visible w-[45rem] h-[27rem] py-3 px-2"
       >
         {card.length > 0 ? (
           card.map((cardItem) => (
